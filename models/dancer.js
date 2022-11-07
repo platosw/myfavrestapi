@@ -13,14 +13,13 @@ const dancerSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    description: {
+    style: {
         type: String,
         required: true
     },
     strYoutube: {
         type: String,
-        required: 'URL can\'t be empty',
-        unique: true
+        required: true 
     },
     registeredDate: {
         type: Date,
@@ -29,10 +28,6 @@ const dancerSchema = new mongoose.Schema({
     }
 });
 
-dancerSchema.path('strYoutube').validate((val) => {
-    urlRegex = /(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-/]))?/;
-    return urlRegex.test(val);
-}, 'Invalid URL');
 
 
-module.exports = mongoose.model('dancer', dancerSchema);
+module.exports = mongoose.model('Dancer', dancerSchema);

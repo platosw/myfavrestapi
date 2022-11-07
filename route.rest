@@ -2,12 +2,34 @@ GET http://localhost:3000/dancers
 
 ###
 
-GET http://localhost:3000/dancers/15
+GET http://localhost:3000/dancers/6369402099b43dd4fcb08811
 
 ###
 
 POST http://localhost:3000/dancers
+Content-Type: application/json
 
 {
-    
+    "name": "Physicx",
+    "crew": "Rivers Crew",
+    "country": "South Korea",
+    "style": "Bboy",
+    "strYoutube": "https://youtu.be/jZ_VIT1rF7U"
+}
+
+
+
+###
+
+
+DELETE http://localhost:3000/dancers/63694181ed04664227862369
+
+
+###
+PATCH http://localhost:3000/dancers/636946a3611d55bd2ccad7cd
+Content-Type: application/json
+
+{
+    "name": "Physicx",
+    "crew": "Rivers / Juice"
 }
