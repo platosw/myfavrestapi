@@ -3,3 +3,11 @@ GET http://localhost:3000/dancers
 ###
 
 GET http://localhost:3000/dancers/15
+
+###
+
+POST http://localhost:3000/dancers
+
+{
+    
+}
