@@ -23,6 +23,7 @@ const dancerSchema = new mongoose.Schema({
     },
     registeredDate: {
         type: Date,
+        required: false,
         default: Date.now
     }
 });
